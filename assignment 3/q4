@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Question4 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int max = n, min = n, sum = 0, count = 0;
+        while (n != 0) {
+            sum += n;
+            count++;
+            if (n > max)
+                max = n;
+            if (n < min)
+                min = n;
+            n = input.nextInt();
+        }
+        if (count > 0) {
+            System.out.println("Largest = " + max);
+            System.out.println("Smallest = " + min);
+            System.out.println("Average = " + (double) sum / count);
+        }
+    }
+}
